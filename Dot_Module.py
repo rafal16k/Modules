@@ -11,7 +11,7 @@ def dot_move_right():
 root = tk.Tk()
 root.title(title)
 root.geometry("1000x900")
-canvas = tk.Canvas(root, width=950, height=600, bg="")
+canvas = tk.Canvas(root, width=950, height=600, bg="white")
 canvas.pack()
 dot = canvas.create_oval(190, 140, 210, 160, fill="blue")
 button_frame = tk.Frame(root)
