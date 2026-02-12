@@ -20,6 +20,7 @@ button_open_dice = tk.Button(
     bg="blue",
     fg="white",
     font=("Arial", 14, "bold"),
+
 )
 
 
@@ -69,5 +70,19 @@ button_open_color = tk.Button(
     fg="white",
     font=("Arial", 14, "bold"),
 )
+def open_dot_module():
+    import Dot_Module
+
+    Dot_Module.root.mainloop()
+button_open_dot = tk.Button(
+    root,
+    text="Open Dot Module",
+    command=open_dot_module,
+    bg="cyan",
+    fg="black",
+    font=("Arial", 14, "bold"),
+)
+
+button_open_dot.pack(pady=50)
 button_open_color.pack(pady=50)
 root.mainloop()
