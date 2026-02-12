@@ -20,7 +20,6 @@ button_open_dice = tk.Button(
     bg="blue",
     fg="white",
     font=("Arial", 14, "bold"),
-
 )
 
 
@@ -58,10 +57,13 @@ button_open_files = tk.Button(
 )
 button_open_files.pack(pady=50)
 
+
 def open_color_module():
     import Color_Module
 
     Color_Module.root.mainloop()
+
+
 button_open_color = tk.Button(
     root,
     text="Open Color Module",
@@ -70,10 +72,14 @@ button_open_color = tk.Button(
     fg="white",
     font=("Arial", 14, "bold"),
 )
+
+
 def open_dot_module():
     import Dot_Module
 
     Dot_Module.root.mainloop()
+
+
 button_open_dot = tk.Button(
     root,
     text="Open Dot Module",
@@ -82,6 +88,23 @@ button_open_dot = tk.Button(
     fg="black",
     font=("Arial", 14, "bold"),
 )
+
+
+def open_scanner_module():
+    import Scanner_Module
+
+    Scanner_Module.root.mainloop()
+
+
+button_open_scanner = tk.Button(
+    root,
+    text="Open Scanner Module",
+    command=open_scanner_module,
+    bg="red",
+    fg="white",
+    font=("Arial", 14, "bold"),
+)
+button_open_scanner.pack(pady=50)
 
 button_open_dot.pack(pady=50)
 button_open_color.pack(pady=50)

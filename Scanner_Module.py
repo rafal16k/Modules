@@ -4,14 +4,10 @@ import threading
 import psutil
 
 try:
-    
 
     gpu_available = True
 except ImportError:
     gpu_available = False
-
-
- 
 
 
 def get_cpu_info():
@@ -35,11 +31,10 @@ def get_ram_info():
 
 def update_scan_results():
     """Update all scan results"""
-    
+
     cpu_label.config(text=get_cpu_info())
     ram_label.config(text=get_ram_info())
     scan_button.config(state="normal", text="Start Scan")
-
 
 
 def scan_in_thread():
@@ -61,7 +56,6 @@ root.title(title)
 root.geometry("400x250")
 
 # Create labels
-
 
 
 cpu_label = tk.Label(
