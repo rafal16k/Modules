@@ -12,7 +12,7 @@ def open_dice_module():
 
 root = tk.Tk()
 root.title(title)
-root.geometry("400x900")
+root.geometry("510x1000")
 button_open_dice = tk.Button(
     root,
     text="Open Dice Roller",
@@ -104,6 +104,8 @@ button_open_scanner = tk.Button(
     fg="white",
     font=("Arial", 14, "bold"),
 )
+
+
 button_open_scanner.pack(pady=50)
 
 button_open_dot.pack(pady=50)
