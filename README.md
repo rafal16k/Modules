@@ -1,26 +1,73 @@
-# To run the run.py file you need to:
+# Modules Project
 
-## Prerequisites
-- Python 3.6 or higher installed on your system
-- tkinter library (usually included with Python)
+A GUI application built with Python and Tkinter that provides various utility modules.
 
-## Instructions
+## Quick Start
 
-### Option 1: Run directly from terminal
+### Running with the run.sh Script
+
+To run this project, use the provided shell script:
+
+1. **Make the script executable** (first time only):
+   ```bash
+   chmod +x run.sh
+   ```
+
+2. **Run the script**:
+   ```bash
+   ./run.sh
+   ```
+
+Alternatively, run the script directly without making it executable:
 ```bash
-python3 run.py
+bash run.sh
 ```
 
-### Option 2: Run with python command
-```bash
-python run.py
-```
+### What the run.sh Script Does
 
-### Option 3: Make the script executable and run it directly (Linux/Mac)
-```bash
-chmod +x run.py
-./run.py
-```
+The `run.sh` script automates the setup and startup process:
+- Creates a virtual environment (`.venv`) if it doesn't exist
+- Activates the virtual environment
+- Installs packages from `requirements.txt` (if available)
+- Launches the application by running `run.py`
 
-## What it does
-The `run.py` script launches the Main Module GUI application, which provides access to various modules including a Dice Roller and other utilities.
+### Manual Setup (Alternative)
+
+If you prefer to set up manually:
+
+1. Create a virtual environment:
+   ```bash
+   python3 -m venv .venv
+   ```
+
+2. Activate it:
+   ```bash
+   source .venv/bin/activate
+   ```
+
+3. Install dependencies (if `requirements.txt` exists):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the application:
+   ```bash
+   python3 run.py
+   ```
+
+## Project Structure
+
+- `Main_Module.py` - Main GUI application launcher
+- `run.py` - Entry point script for the application
+- `run.sh` - Bash script for automated setup and execution
+- Additional modules for various utilities
+
+## Requirements
+
+- Python 3.6+
+- Tkinter (usually included with Python)
+- Any packages listed in `requirements.txt`
+
+## License
+
+See LICENSE file for details.
