@@ -1,7 +1,12 @@
 import tkinter as tk
 from tkinter import filedialog
-from PIL import Image, Image
 import os
+
+try:
+    from PIL import Image, ImageTk
+    PIL_AVAILABLE = True
+except Exception:
+    PIL_AVAILABLE = False
 
 selected_file_label = None
 file_icon_label = None
@@ -9,20 +14,22 @@ file_icon_label = None
 
 def file_path():
     global selected_file_label, file_icon_label
-    file = filedialog.askopenfilename()
+    filepath = filedialog.askopenfilename()
 
-    if file:
-        # Wyświetl ścieżkę
-        selected_file_label.config(text=f"Plik: {file}")
+    if filepath:
+        selected_file_label.config(text=f"Plik: {filepath}")
 
-        # Wyświetl ikonę
+        if not PIL_AVAILABLE:
+            file_icon_label.config(text="Pillow not installed", image="")
+            return
+
         try:
-            icon = Image.open(file)
+            icon = Image.open(filepath)
             icon.thumbnail((100, 100))
             photo = ImageTk.PhotoImage(icon)
-            file_icon_label.config(image=photo)
+            file_icon_label.config(image=photo, text="")
             file_icon_label.image = photo
-        except:
+        except Exception:
             file_icon_label.config(text="Error", image="")
 
 
