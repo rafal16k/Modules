@@ -110,4 +110,21 @@ button_open_scanner.pack(pady=50)
 
 button_open_dot.pack(pady=50)
 button_open_color.pack(pady=50)
+
+
+def open_notepad_module():
+    import Notepad_Module
+
+    Notepad_Module.root.mainloop()
+
+
+button_open_notepad = tk.Button(
+    root,
+    text="Open Notepad Module",
+    command=open_notepad_module,
+    bg="brown",
+    fg="white",
+    font=("Arial", 14, "bold"),
+)
+button_open_notepad.pack(pady=50)
 root.mainloop()
