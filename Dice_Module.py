@@ -97,7 +97,8 @@ button_classic = tk.Button(
 )
 
 
-status_bar = tk.Label(root, text="Ready to roll!", bd=1, relief=tk.SUNKEN, anchor=tk.W)
+status_bar = tk.Label(root, text="Ready to roll!", bd=2
+, relief=tk.SUNKEN, anchor=tk.W)
 status_bar.pack(side=tk.BOTTOM, fill=tk.X)
 
 button_roll.pack()
